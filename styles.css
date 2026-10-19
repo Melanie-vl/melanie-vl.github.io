@@ -212,18 +212,20 @@ dialog::backdrop{background:rgba(255,255,255,.96)}
 .head-art.planes .y{left:0;top:0;width:46%;height:52%;background:var(--yellow)}
 .head-art.planes .k{right:0;bottom:0;width:34%;height:40%;background:var(--pink)}
 
-/* business footer */
-.site-foot{color:var(--ink);font-size:1rem;position:relative;display:grid;grid-template-columns:1fr 2fr;gap:24px var(--gutter);align-items:start;margin-top:24px;padding:48px 0 40px;border-top:0}
+/* footer: contact + business details */
+.site-foot{color:var(--ink);font-size:1rem;position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:32px calc(var(--gutter) * 1.5);align-items:start;margin-top:72px;padding:64px 0 40px}
 .site-foot::before{content:"";position:absolute;left:0;right:0;top:0;height:8px;
   background:linear-gradient(90deg,var(--red) 0 14.28%,var(--orange) 0 28.56%,var(--yellow) 0 42.84%,var(--green) 0 57.12%,var(--blue) 0 71.4%,var(--purple) 0 85.68%,var(--pink) 0)}
-.site-foot .biz{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1;margin:6px 0 0}
-.biz-info{margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 32px}
+.foot-intro h2{font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,4.5vw,3.4rem);line-height:1;margin:0 0 16px}
+.foot-intro p{margin:0;max-width:40ch}
+.biz-info{margin:6px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 40px}
 .biz-info dt{font-size:.85rem;color:var(--muted);margin-bottom:4px}
-.biz-info dd{margin:0;font-weight:500;overflow-wrap:anywhere}
-.biz-info a{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
-.biz-info a:hover{text-decoration-color:var(--pink)}
-.site-foot .legal{grid-column:1 / -1;margin:16px 0 0;color:var(--muted);font-size:.85rem}
+.biz-info dd{margin:0;font-weight:500;font-size:1.1rem;overflow-wrap:anywhere}
+.biz-info a{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;display:inline-block;transition:transform .2s ease;transform-origin:left center}
+.biz-info a:hover{text-decoration-color:var(--pink);transform:scale(1.06)}
+.site-foot .legal{grid-column:1 / -1;margin:16px 0 0;padding-top:20px;border-top:1px solid var(--rule);color:var(--muted);font-size:.85rem}
 @media (max-width:760px){
-  .site-foot{grid-template-columns:1fr}
+  .site-foot{grid-template-columns:1fr;margin-top:48px;padding-top:48px}
   .biz-info{grid-template-columns:1fr}
 }
+@media (prefers-reduced-motion: reduce){.biz-info a{transition:none}.biz-info a:hover{transform:none}}
