@@ -1,6 +1,6 @@
 # Portfolio – Melanie van Leeuwen
 
-Portfoliowebsite: een startpagina en zes categoriepagina's. Gewone HTML en CSS, er is geen build-stap nodig.
+Tweetalige portfoliowebsite: Engels (Brits) in de hoofdmap, Nederlands in de map `nl/`. Elke taal heeft een startpagina en zes categoriepagina's. Rechtsboven wissel je met NL | EN naar dezelfde pagina in de andere taal. Gewone HTML en CSS, er is geen build-stap nodig.
 
 | Bestand | Inhoud |
 |---|---|
@@ -13,6 +13,8 @@ Portfoliowebsite: een startpagina en zes categoriepagina's. Gewone HTML en CSS, 
 | `business.html` | Volt Nederland congress, Volt Europa congress, Healthy Worklife |
 | `styles.css` | Vormgeving en kleuren |
 | `main.js` | Fotoviewer en het diepte-effect bij scrollen |
+
+Pas een tekst altijd in **beide** talen aan: het Engelse bestand in de hoofdmap en hetzelfde bestand in `nl/`.
 
 Zoek op `TODO` voor de projecten die nog aangevuld moeten worden.
 

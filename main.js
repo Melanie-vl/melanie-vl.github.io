@@ -9,12 +9,12 @@
     document.querySelectorAll('[data-gallery]').forEach(function(g){
       var imgs=[].slice.call(g.querySelectorAll('img'));
       g.querySelectorAll('button').forEach(function(b,n){
-        b.setAttribute('aria-label','Enlarge photo: '+imgs[n].alt);
+        b.setAttribute('aria-label',(dlg.getAttribute('data-enlarge')||'Enlarge photo: ')+imgs[n].alt);
         b.addEventListener('click',function(){open(imgs,n);});
       });
       var all=g.parentNode.querySelector('.all');
       if(all){
-        all.textContent='View all '+imgs.length+' photos';
+        all.textContent=(all.getAttribute('data-label')||'View all {n} photos').replace('{n}',imgs.length);
         all.addEventListener('click',function(){open(imgs,0);});
       }
     });
